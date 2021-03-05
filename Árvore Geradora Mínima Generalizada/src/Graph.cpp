@@ -524,6 +524,71 @@ Graph *Graph::agmPrim()
     return grafo;
 }
 
+//
+// verificar e fazer as alterações da classe busca
+
+void Graph::buscaLargura(){
+ //void Grafo::bfs(int v)
+queue<int> fila;
+	bool visitados[V]; // vetor de visitados
+
+	for(int i = 0; i < V; i++)
+		visitados[i] = false;
+
+	cout << "Visitando vertice " << v << " ...\n";
+	visitados[v] = true; // marca como visitado
+
+	while(true){
+		list<int>::iterator it;
+		for(it = adj[v].begin(); it != adj[v].end(); it++){
+			if(!visitados[*it]){
+				cout << "Visitando vertice " << *it << " ...\n";
+				visitados[*it] = true; // marca como visitado
+				fila.push(*it); // insere na fila
+			}
+		}
+
+		// verifica se a fila NÃO está vazia
+		if(!fila.empty()){
+			v = fila.front(); // obtém o primeiro elemento
+			fila.pop(); // remove da fila
+		}
+		else
+			break;
+	}
+
+}
+
+// verificar e fazer as alterações da classe busca
+
+void Graph:: ordenacaoTopologica(){
+   //void ordenacaoTopologicaAux(Vertice& v, map<string,bool>& visitados, deque<Vertice>& fila_ordenacao) {
+
+	visitados[v.getNome()] = true;
+
+	for(Vertice* w: v.adjacentes)
+		if (!visitados[w->getNome()])
+			ordenacaoTopologicaAux(*w, visitados, fila_ordenacao);
+
+        fila_ordenacao.push_front(v);
+    }
+
+    deque<Vertice> ordenacaoTopologica(Grafo& grafo) {
+
+        map<string, bool> visitados;
+        deque<Vertice> fila_ordenacao;
+
+        for(Vertice& v: grafo.vertices)
+            visitados[v.getNome()] = false;
+
+        for(Vertice& v: grafo.vertices)
+            if (!visitados[v.getNome()])
+                ordenacaoTopologicaAux(v, visitados, fila_ordenacao);
+
+        return fila_ordenacao;
+    }
+
+//
 void Graph::imprimeGrafo(ofstream &output_file) // imprime o grafo no formato dot{
     Node *no = this->first_node;
     Edge *aresta = no->getFirstEdge();
