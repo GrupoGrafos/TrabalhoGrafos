@@ -1,16 +1,16 @@
-#ifndef ARVORE_H
-#define ARVORE_H
+#ifndef ARVORE_
+#define ARVORE_
 
 
-class Arvore
+class arvore
 {
     public:
-        Arvore();
-        virtual ~Arvore();
+        arvore();
+        virtual ~arvore();
 
     protected:
 
     private:
 };
 
-#endif // ARVORE_H
+#endif // ARVORE_

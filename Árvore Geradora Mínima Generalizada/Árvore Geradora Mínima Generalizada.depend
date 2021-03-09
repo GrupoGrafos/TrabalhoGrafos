@@ -1,0 +1,35 @@
+# depslib dependency file v1.0
+1614999318 source:d:\pasta pessoal\rodrigo\ufjf\teoria dos grafos\grafos 2021.1\trabalho\trabalhografos-main\Árvore geradora mínima generalizada\main.cpp
+	<iostream>
+	<fstream>
+	<string>
+	<math.h>
+	<utility>
+	<tuple>
+	<iomanip>
+	<stdlib.h>
+	<chrono>
+	"Graph.h"
+	"Node.h"
+
+1615072423 d:\pasta pessoal\rodrigo\ufjf\teoria dos grafos\grafos 2021.1\trabalho\trabalhografos-main\Árvore geradora mínima generalizada\include\graph.h
+	"Node.h"
+	<fstream>
+	<stack>
+	<list>
+	<vector>
+
+1614999318 d:\pasta pessoal\rodrigo\ufjf\teoria dos grafos\grafos 2021.1\trabalho\trabalhografos-main\Árvore geradora mínima generalizada\include\node.h
+	"Edge.h"
+
+1614999318 d:\pasta pessoal\rodrigo\ufjf\teoria dos grafos\grafos 2021.1\trabalho\trabalhografos-main\Árvore geradora mínima generalizada\include\edge.h
+
+1614999318 source:d:\pasta pessoal\rodrigo\ufjf\teoria dos grafos\grafos 2021.1\trabalho\trabalhografos-main\Árvore geradora mínima generalizada\src\edge.cpp
+	"Edge.h"
+	<iostream>
+
+1614999681 source:d:\pasta pessoal\rodrigo\ufjf\teoria dos grafos\grafos 2021.1\trabalho\trabalhografos-main\Árvore geradora mínima generalizada\src\node.cpp
+	"Node.h"
+	"Edge.h"
+	<iostream>
+

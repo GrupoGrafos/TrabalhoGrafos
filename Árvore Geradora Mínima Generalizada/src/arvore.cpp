@@ -1,11 +1,11 @@
-#include "Arvore.h"
+#include "arvore.h"
 
-Arvore::Arvore()
+arvore::arvore()
 {
     //ctor
 }
 
-Arvore::~Arvore()
+arvore::~arvore()
 {
     //dtor
 }

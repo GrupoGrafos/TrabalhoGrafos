@@ -59,6 +59,8 @@ class Graph{
 
         //auxiliar
         void imprimeGrafo(ofstream& output_file);
+        void buscaLargura();
+        void ordenacaoTopologica();
     private:
         //Auxiliar methods
 
